@@ -1,0 +1,63 @@
+\newpage
+\section{Preliminary Set Theory}
+The notion of regular uncountable cardinal is a generalization of the pigeonhole principle for uncountable sets.
+
+\begin{definition}[ordinal]
+    An \emph{ordinal} is a set $\alpha$ such that $\bigcup\alpha\subset\alpha$ and well-ordered by $\in$.
+\end{definition}
+
+\begin{definition}[cardinal]
+    % A \emph{cardinal} is an ordinal $\alpha$ such that there is no bijection between $\alpha$ and any of its elements.
+\end{definition}
+
+\begin{definition}[regular cardinal]
+    An uncountable cardinal number $\lambda$ is said to be \textit{regular} if for every $\kappa<\lambda$, every set $S$ of cardinal $\lambda$, and every function $f:S\to\kappa$, there exists $H\subset S$ of cardinal $\lambda$ such that the function $f$ is constant on $H$.
+\end{definition}
+
+
+\begin{definition}[successor cardinal]
+    Let $\mu$ be a cardinal, define the \emph{successor cardinal} of $\mu$ to be the least cardinal strictly greater than $\mu$, denoted by $\mu^+$.
+\end{definition}
+
+\begin{proposition}
+    For every infinite cardinal $\mu$, the cardinal $\mu^+$ is regular.
+\end{proposition}
+\begin{proof}
+    
+\end{proof}
+
+
+\begin{notation}
+    Let $n$ be a positive integer, and let $S$ be a linearly ordered set. Denote the set $\{(j_1, j_2, \ldots, j_n)\mid j_1<j_2<\ldots<j_n\}$ by $[S]^n$. For a subset $H\subset S$, let
+    \[
+        [H]^n=\{(j_1, j_2, \ldots, j_n)\in H^n\mid j_1<j_2<\ldots<j_n\}.
+    \]
+\end{notation}
+
+\begin{example}
+    We can view $[\omega]^2$ as the complete undirected graph on $\omega$, and any pair of distinct elements in $\omega$ is an edge in the graph.
+\end{example}
+
+\begin{definition}
+    Let $n<\omega$ and suppose $\lambda, \kappa$ and $\mu$ are cardinal numbers (not necessarily infinite). We denote by $\lambda\to(\mu)_\kappa^n$ the following statement: \\
+    For every set $S$ of cardinal $\lambda$ and every function $c:[S]^n\to\kappa$, there exists $H\subset S$ of cardinal $\mu$ and there exists $i_0<\kappa$ such thatc for every $\boldsymbol j\in[H]^n$, $c(\boldsymbol j)=i_0$. \\
+    We denote by $\lambda\not\to(\mu)_\kappa^n$ if the above statement is false.
+\end{definition}
+
+In the example above, we call the function $c$ \emph{coloring with $\kappa$ colors}, and the set $H$ \emph{monochromatic set}.
+
+\begin{notation}
+    $[S]^{<\omega}= \bigcup_{n<\omega}[S]^n$.
+\end{notation}
+
+\begin{theorem}[infinitary Ramsey]
+    $\aleph_0\to(\aleph_0)_2^2$
+\end{theorem}
+\begin{theorem}
+    
+\end{theorem}
+
+\begin{definition}[weakly compactness]
+    An uncountable $\chi$ is called \emph{weakly compact} if $\chi\to(\chi)_2^2$ holds.
+    
+\end{definition}
