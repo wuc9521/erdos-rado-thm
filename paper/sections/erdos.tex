@@ -1,2 +1,41 @@
 \newpage
 \section{\erdos-Rado Theorem}
+
+\begin{definition}
+    Let $\alpha$ be an ordinal and let $\lambda$ be a carinal. By induction on ordinals, we define the cardinal number $\beth_{\alpha}(\lambda)$ as follows:
+    \begin{enumerate}
+        \item $\beth_0(\lambda)=\lambda$ 
+        \item if $\alpha$ is a limit ordinal, $\beth_\alpha(\lambda):=\displaystyle{\bigcup_{i<\alpha}\beth_i(\lambda)}$
+        \item if $\alpha=\beta+1$, $\beth_\alpha(\lambda)=2^{\beth_\beta(\lambda)}$
+    \end{enumerate}
+    When $\lambda=\aleph_0$ we write $\beth_\alpha$ instead of $\beth_\alpha(\aleph_0)$.
+\end{definition}
+
+With the notation above, $\beth_1(\lambda)$ is just another way to write $2^\lambda$. An alternative way to state the generalized continuum hypothesis is for every ordinal $\alpha$, $\beth_\alpha=\aleph_\alpha$ holds.
+
+
+\begin{theorem}[The \erdos-Rado Theorem]
+    For every natural number $n$ and every infinite cardinal $\lambda$, we have that
+    \[
+    \beth_n(\lambda)^+\to(\lambda^+)_\lambda^{n+1}
+    \]
+\end{theorem}
+
+Before staring the proof, we'll need to introduce a central model-theoretic concept which is the generalization of a first-order formula. 
+
+\begin{definition}
+    Let $L$ be a similarity type, let $M$ be an $L$-structure, $A\subset |M|$ and $\boldsymbol{a}\in|M|$. Then we define
+    \[
+    \tp(\boldsymbol{a}/A, M):=\{\varphi(\boldsymbol{x}; \boldsymbol{b})\mid \varphi(\boldsymbol{x};\boldsymbol{y})\in \fml(L),\boldsymbol{b}\in A,M\vDash\varphi[\boldsymbol{a};\boldsymbol{b}]\}
+    \]
+    We call $\tp(\boldsymbol{a}/A, M)$ the \emph{type} of $\boldsymbol{a}$ over $A$ in $M$.
+\end{definition}
+
+
+\begin{example}
+    Suppose $L$ is the language of fields, abd suppose that $M$ is a field. Given $A\subset |M|$ and $\boldsymbol{a}\in |M|$, $\tp(\boldsymbol{a}/A,M)$ contains all the equations with the coefficients in $A$ in unknown $\boldsymbol{x}$ that $\boldsymbol{a}$ is a solution for.
+\end{example}
+
+\begin{definition}
+    Let $L$ be a similarity type, let $M$ be an $L$-structure, $A\subset |M|$ and let $\b{x}$
+\end{definition}

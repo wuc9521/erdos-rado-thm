@@ -1,6 +1,65 @@
+\newpage
 \section{Ramsey's Theorem}
 
+\begin{notation}
+    Let $n<\omega$ and suppose $\lambda, \kappa$ and $\mu$ are cardinal numbers (not necessarily infinite). We denote by $\lambda\to(\mu)_\kappa^n$ the following statement: \\
+    For every set $S$ of cardinal $\lambda$ and every function $c:[S]^n\to\kappa$, there exists $H\subset S$ of cardinal $\mu$ and there exists $i_0<\kappa$ such that for every $\boldsymbol j\in[H]^n$, $c(\boldsymbol j)=i_0$. \\
+    We denote by $\lambda\not\to(\mu)_\kappa^n$ if the above statement is false.
+\end{notation}
 
-\begin{theorem}[Ramsey's Theorem]
-Let \dots
+In the example above, we call the function $c$ \emph{coloring with $\kappa$ colors}, and the set $H$ \emph{monochromatic set}. It's obvious that if we can understand the case of $n=2$, the other cases can be easily deduced.
+
+
+\begin{theorem}[infinite Ramsey]
+    $\aleph_0\to(\aleph_0)_2^2$
 \end{theorem}
+
+\begin{theorem}[Finite Ramsey Theorem]
+    For every positive integers $m, n, k$, there exists a positive integer $l(m,n,k)$ such that $l(m,n,k)\to (m)_k^n$
+\end{theorem}
+
+\begin{lemma}
+    Let $n,\lambda,\kappa$ and $\mu$ be cadinals. Suppose that $\lambda\to(\mu)_\kappa^n$ holds, then the following statements hold:
+    \begin{enumerate}
+        \item\label{lemma:lambda} If $\lambda\leq\lambda'$, then $\lambda'\to(\mu)_\kappa^n$ holds.
+        \item If $\mu\geq\mu'$, then $\lambda\to(\mu')_\kappa^n$ holds.
+        \item If $\kappa\geq\kappa'$, then $\lambda\to(\mu)_{\kappa'}^n$ holds.
+        \item If $n\geq n'$, then $\lambda\to(\mu)_\kappa^{n'}$ holds.
+    \end{enumerate}
+\end{lemma}
+
+\begin{theorem}[Sierpinski 1933]
+    $\aleph_1$ is not weakly compact. That is, $\aleph_1\not\to(\aleph_1)_2^2$.
+\end{theorem}
+\begin{proof}
+    By Cantor's theorem ($2^{\aleph_0}\geq \aleph_1$) and \ref{lemma:lambda}, it's enough to show that $2^{\aleph_0}\not\to(\aleph_1)_2^2$. Fix $<^*$ to be a well-ordering of the reals. Denote by $<_\R$ the usual ordering of the reals. For every $a<^*b\in\R$ define a coloring as follows
+    \[
+    F(a, b) := \begin{cases}
+        0 & \text{if } a<_\R b \\
+        1 & \text{o.w.}
+    \end{cases}
+    \]
+    For the sake of contradiction, suppose there exists a set $S\subset\R$ of cardinal $\aleph_1$ such that $F$ is constant on $[S]^2$. 
+    In case the constant value of $F$ is 0 then by definition of $F$ we have that $a<_\R b\iff a<^* b$. Since $S$ has cardinality $\aleph_1$ we can pick an $<^*$-increasing sequence $\{a_\alpha\mid \alpha<\aleph_1\}$ of elements of $S$. Now for every $\alpha<\omega$ define $I_\alpha=(a_\alpha, a_{\alpha+1})$. Since the order $<^*$ coincide on $S$ with the usual ordering of the reals and $\{a_\alpha\}$ is increasing, we have that $i<j<\aleph_1$ implies $I_i\cap I_j=\emptyset$. Since the rationals $\Q$ are dense in $\R$, for every $\alpha<\aleph_1$ we can pick a rational $q_\alpha\in I_\alpha$. Since $\Q$ is countable, there exists a rational $q$ such that $q=q_\alpha$ for uncountably many $\alpha$. But this contradicts the fact that $\{I_\alpha\}$ is a pairwise disjoint family. The case where the constant value of $F$ is 1 is similar.
+\end{proof}
+
+The above theorem shows that $\aleph_1\not\to(\aleph_1)_2^2$, so a natural question would be: Does there exists a cardinal $\lambda$ such that $\lambda\to(\aleph_1)_2^2$ holds? What we know is, if such a cardinal exists, it should be strictly greater than $\aleph_1$. 
+
+\begin{definition}[weakly compactness]
+    An uncountable $\chi$ is called \emph{weakly compact} if $\chi\to(\chi)_2^2$ holds.
+\end{definition}
+
+A natural question to ask is: Do weakly compact cardinals exist? The answer is yes, and the existence of weakly compact cardinals is independent of ZFC.
+
+\begin{theorem}[ZFC]
+    Let $\chi$ be an uncoutable cardinal. If $\chi$ is weakly compact, then the first order theory ZFC has a model (namely ZFC is consistent).
+\end{theorem}
+
+\begin{theorem}[Godel's Incompleteness Theorem]
+    If ZFC is consistent, then ZFC is incomplete. That is, from ZFC alone is not enough to prove the consistency of ZFC.
+\end{theorem}
+
+From the above two facts, we get the following corollary immediately.
+\begin{corollary}
+    ZFC $\not\proves$ the existence of weakly compact cardinals.
+\end{corollary}
