@@ -71,7 +71,7 @@
 
 \
 
-_Pf._ We proceed by indction on $n < omega$ to show that for very infinite $kappa$, the partition relation
+_Pf._ We proceed by induction on $n < omega$ to show that for very infinite $kappa$, the partition relation
 $
   beth_n (kappa)^+ #sym.arrow.r (kappa^+)_kappa^(n+1)
 $
